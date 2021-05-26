@@ -4,7 +4,7 @@ Machine Learning app, classifies music genres from music files based on a K-Near
 ---
 ### TODO:
 - [ ] Create KNN neural network model
-- [ ] Create spotify developer account to link with spotify API
+- [x] Create spotify developer account to link with spotify API
 - [ ] Create playlists to train model
 - [ ] Modify data to make it suitable to train the model 
 - [ ] Train model

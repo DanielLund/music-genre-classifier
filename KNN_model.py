@@ -1,1 +1,2 @@
-import tensorflow as tf
+from sklearn.neighbours import KNeighborsClassifier
+from sklearn.model_selection import cross_val_score

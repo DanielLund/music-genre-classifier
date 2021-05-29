@@ -129,4 +129,4 @@ dmypy.json
 .pyre/
 
 #secret key for spotify API
-.secret.py
+secret.py

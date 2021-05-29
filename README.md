@@ -4,7 +4,7 @@ Machine Learning app, classifies music genres from music files, utilising a deep
 ---
 ### TODO:
 - [x] Create spotify developer account to link with spotify API
-- [ ] Create playlists to train model
+- [x] Create playlists to train model
 - [ ] Create TensorFlow deep learning NN
 - [ ] Modify data to make it suitable to train the model
 - [ ] Train model

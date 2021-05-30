@@ -15,9 +15,6 @@ client_credentials_manager = SpotifyClientCredentials(
 sp = spotipy.Spotify(
             client_credentials_manager=client_credentials_manager)
 
-url_house = ""
-url_breaks = ""
-
 
 def analyse_playlist(url):
     """Retrieve all songs from the training playlist URL
@@ -111,7 +108,6 @@ def analyse_playlist(url):
     df = pd.DataFrame({"Song Name": name_list, "Artist": artist_list, "Album": album_list, "ID": identifier_list})
     
     #Dataframe 2 for each spotify song category
-    
     df_2 = pd.DataFrame({"Danceability":danceability,
                          "Mode":mode,
                          "Energy":energy,
@@ -146,4 +142,9 @@ def PCA(excel_file):
     pca = PCA(n_components=len(df_scaled.columns))
     pca_series = pca.fit_transform(df_scaled).T
     
-    df_pca = pd.DataFrame
+    df_pca = pd.DataFrame({"PC1": pca_series[0], "PC2": pca_series[1]})
+    df_pca.to_excel("DataFrame_PCA" + f"{excel_file}")
+    
+    explained_variance = pca.explained_variance_ratio_
+    
+    eigenvector_loadings = pca.singular_values_
